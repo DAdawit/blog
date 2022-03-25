@@ -1,33 +1,17 @@
 <template>
-  <v-footer
-    class="py-4"
-    dark
-    height="auto"
-  >
+  <v-footer class="py-4" dark height="auto">
     <v-container class="mx-auto">
       <v-row>
         <v-col cols="9">
-          <base-btn
-            v-for="(item, i) in items"
-            :key="i"
-            :href="item.href"
-            class="ml-0 mr-3"
-            color="primary"
-            square
-            target="_blank"
-          >
+          <base-btn v-for="(item, i) in items" :key="i" :href="item.href" class="ml-0 mr-3" color="primary" square
+            target="_blank">
             <v-icon v-text="item.icon" />
           </base-btn>
         </v-col>
 
         <v-spacer />
 
-        <base-btn
-          class="mr-0"
-          square
-          title="Go to top"
-          @click="$vuetify.goTo(0)"
-        >
+        <base-btn class="mr-0" square title="Go to top" @click="$vuetify.goTo(0)">
           <v-icon>mdi-chevron-up</v-icon>
         </base-btn>
       </v-row>
@@ -42,20 +26,17 @@
     data: () => ({
       items: [
         {
-          href: '#!',
-          icon: 'mdi-twitter',
-        },
-        {
-          href: '#!',
+          href: 'https://www.instagram.com/dawitccnt',
           icon: 'mdi-instagram',
         },
         {
-          href: '#!',
+          href: 'https://www.facebook.com/dawit.love.33',
           icon: 'mdi-facebook',
+
         },
         {
-          href: '#!',
-          icon: 'mdi-google-plus',
+          href: 'https://t.me/Da_W_iT',
+          icon: 'mdi-telegram',
         },
         {
           href: '#!',
@@ -72,4 +53,5 @@
       ],
     }),
   }
+
 </script>

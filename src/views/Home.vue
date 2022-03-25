@@ -24,4 +24,5 @@
       Subscribe: () => import('@/components/home/Subscribe'),
     },
   }
+
 </script>

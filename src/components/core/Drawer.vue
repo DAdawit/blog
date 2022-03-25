@@ -1,18 +1,7 @@
 <template>
-  <v-navigation-drawer
-    v-model="drawer"
-    app
-    dark
-    temporary
-  >
+  <v-navigation-drawer v-model="drawer" app dark temporary>
     <v-list>
-      <v-list-item
-        v-for="(link, i) in links"
-        :key="i"
-        :to="link.to"
-        :href="link.href"
-        @click="onClick($event, link)"
-      >
+      <v-list-item v-for="(link, i) in links" :key="i" :to="link.to" :href="link.href" @click="onClick($event, link)">
         <v-list-item-title v-text="link.text" />
       </v-list-item>
     </v-list>
@@ -32,10 +21,10 @@
     computed: {
       ...mapGetters(['links']),
       drawer: {
-        get () {
+        get() {
           return this.$store.state.drawer
         },
-        set (val) {
+        set(val) {
           this.setDrawer(val)
         },
       },
@@ -43,7 +32,7 @@
 
     methods: {
       ...mapMutations(['setDrawer']),
-      onClick (e, item) {
+      onClick(e, item) {
         e.stopPropagation()
 
         if (item.to === '/') {
@@ -59,4 +48,5 @@
       },
     },
   }
+
 </script>

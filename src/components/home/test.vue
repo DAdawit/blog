@@ -43,7 +43,7 @@
       </v-row>
       <!-- </v-item-group> -->
     </div>
-    <h1>{{posts[0]}}</h1>
+    <!-- <h1>{{posts[0]}}</h1> -->
   </div>
 </template>
 <script>

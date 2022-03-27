@@ -1,0 +1,21 @@
+[debug] [2022-03-27T10:48:48.440Z] ----------------------------------------------------------------------
+[debug] [2022-03-27T10:48:48.442Z] Command:       /usr/bin/node /usr/bin/firebase init
+[debug] [2022-03-27T10:48:48.443Z] CLI Version:   10.5.0
+[debug] [2022-03-27T10:48:48.443Z] Platform:      linux
+[debug] [2022-03-27T10:48:48.443Z] Node Version:  v16.14.0
+[debug] [2022-03-27T10:48:48.467Z] Time:          Sun Mar 27 2022 06:48:48 GMT-0400 (Eastern Daylight Time)
+[debug] [2022-03-27T10:48:48.468Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-03-27T10:48:48.514Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-03-27T10:48:48.516Z] > authorizing via signed-in user (dawitccnt@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/deva/Downloads/blog-free-v1.0.0
+

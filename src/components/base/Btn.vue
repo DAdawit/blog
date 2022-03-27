@@ -1,12 +1,5 @@
 <template>
-  <v-btn
-    :style="styles"
-    color="primary"
-    fab
-    small
-    v-bind="$attrs"
-    v-on="$listeners"
-  >
+  <v-btn :style="styles" color="primary" fab small v-bind="$attrs" v-on="$listeners">
     <slot />
   </v-btn>
 </template>
@@ -20,11 +13,12 @@
     },
 
     computed: {
-      styles () {
+      styles() {
         return {
           borderRadius: this.square ? '2px' : undefined,
         }
       },
     },
   }
+
 </script>

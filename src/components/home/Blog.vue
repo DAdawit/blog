@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <v-container>
     <div class=" px-5 mb-5 ">
-      <h1 class="subheading grey--text mb-5 ">All Auctions</h1>
+      <h1 class="subheading grey--text my-10 ">Blogs</h1>
       <!-- <v-item-group class="mb-5"> -->
       <v-row class="pt-5">
-        <v-col v-for="(post,index) in posts" :key="index" cols="12" sm="12" md="4" lg="4">
-          <v-item cols="12" sm="12" md="6" lg="4">
+        <v-col v-for="(post,index) in posts" :key="index" cols="12" sm="12" md="6" lg="4">
+          <v-item cols="12" sm="6" md="6" lg="4">
             <v-hover v-slot="{ hover }">
               <v-card flat tile class="mx-auto" :elevation="hover ? 12 : 2" :class="{ 'on-hover': hover }">
                 <v-img :src="require(`@/assets/articles/${post.hero}`)" height="400"
@@ -27,7 +27,7 @@
                     </v-col>
 
                     <v-col align-self="end">
-                      <v-btn class="text-uppercase ma-0" color="primary" label small>
+                      <v-btn class="text-uppercase ma-0" color="primary" label small @click="showDescription(post)">
                         Read More
                       </v-btn>
                     </v-col>
@@ -43,13 +43,68 @@
       </v-row>
       <!-- </v-item-group> -->
     </div>
-    <!-- <h1>{{posts[0]}}</h1> -->
-  </div>
+    <template v-if="show">
+      <div class="text-center">
+        <v-dialog v-model="dialog" width="95%" persistent>
+          <v-card>
+            <v-card-title class="text-h5 grey lighten-2">
+              Privacy Policy
+            </v-card-title>
+
+            <v-card-text>
+              <v-row>
+                <v-col cols="12" sm="12" md="6" lg="6" xl="6">
+                  <v-img :src="require(`@/assets/articles/${singlePost.hero}`)" height="600" 
+                    gradient="rgba(0, 0, 0, .42), rgba(0, 0, 0, .42)">
+                  </v-img>
+                </v-col>
+                <v-col cols="12" sm="12" md="6" lg="6" xl="6">
+                  <v-row>
+                    <v-col class="d-flex justify-center" cols="12" sm="12" md="12" lg="12" xl="12">
+                      <h1 class="subheading blue-grey--text mb-5 ">{{singlePost.title}}</h1>
+
+                    </v-col>
+                    <v-col cols="12" sm="12" md="12" lg="12" xl="12">
+                      <p class="subheading grey--text mb-5 ">
+                        {{para}}
+                      </p>
+
+                    </v-col>
+                  </v-row>
+                </v-col>
+              </v-row>
+            </v-card-text>
+
+            <v-divider></v-divider>
+
+            <v-card-actions>
+              <v-spacer></v-spacer>
+              <v-btn color="primary" text @click="dialog = false">
+                close
+              </v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-dialog>
+      </div>
+    </template>
+  </v-container>
 </template>
 <script>
   export default {
+    methods: {
+      showDescription(post) {
+        this.singlePost=post;
+        this.show=true;
+        this.dialog=true;
+      }
+    },
+
     data() {
       return {
+        singlePost:{},
+        dialog: false,
+        show:false,
+        para: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.',
         posts: [{
             "title": "Moroccan Days",
             "author": "John L",
@@ -136,13 +191,16 @@
 </script>
 
 <style scoped>
-    .v-card {
-        transition: opacity .4s ease-in-out;
-    }
-    .v-card:not(.on-hover) {
-        opacity: 0.9;
-    }
-    .show-btns {
-        color: rgb(245, 245, 245) !important;
-    }
+  .v-card {
+    transition: opacity .4s ease-in-out;
+  }
+
+  .v-card:not(.on-hover) {
+    opacity: 0.9;
+  }
+
+  .show-btns {
+    color: rgb(245, 245, 245) !important;
+  }
+
 </style>

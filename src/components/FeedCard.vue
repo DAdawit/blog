@@ -1,7 +1,7 @@
 <template>
-  <!-- <v-col cols="12" :md="size === 2 ? 6 : size === 3 ? 4 : undefined"> -->
+  <v-col cols="12" :md="size === 2 ? 6 : size === 3 ? 4 : undefined">
 
-    <v-col cols="12" sm="12" md="4" lg="4" xl="4">
+    <!-- <v-col cols="12" sm="12" md="4" lg="4" xl="4"> -->
       <v-hover v-slot="{ hover }">
         <base-card :height="value.prominent ? 450 : 350" color="grey lighten-1" dark href="#!"
           :elevation="hover ? 12 : 2" :class="{ 'on-hover': hover }">
@@ -23,11 +23,11 @@
                 </div>
               </v-col>
 
-              <v-col align-self="end">
+              <!-- <v-col align-self="end">
                 <v-chip class="text-uppercase ma-0" color="primary" label small @click="dialog = false">
                   Read More
                 </v-chip>
-              </v-col>
+              </v-col> -->
             </v-row>
           </v-img>
         </base-card>

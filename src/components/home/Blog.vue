@@ -73,7 +73,7 @@
     </div>
     <template v-if="show">
       <div class="text-center">
-        <v-dialog v-model="dialog" width="95%" >
+        <v-dialog v-model="dialog" width="95%">
           <v-card>
             <v-card-title class="text-h5 grey lighten-2">
               {{singlePost.title}}
@@ -119,6 +119,12 @@
         </v-dialog>
       </div>
     </template>
+
+    <template>
+      <div class="text-center">
+        <v-pagination color="primary" v-model="page" :length="4" circle></v-pagination>
+      </div>
+    </template>
   </v-container>
 </template>
 <script>
@@ -133,6 +139,7 @@
 
     data() {
       return {
+        page:1,
         items: [{
             href: 'https://www.instagram.com/dawitccnt',
             icon: 'mdi-instagram',

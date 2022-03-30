@@ -18,11 +18,11 @@
     <v-container class="mt-10">
       <v-row>
         <v-col class="d-flex justify-center" sm="12" md="12" lg="12" xl="12">
-           <h1 class="display-2 grey--text mb-5 text-capitalize ">{{title}}</h1>
+          <h1 class="display-2 grey--text mb-5 text-capitalize">{{title}}</h1>
           <!-- <h1 class="display-3 grey--text text-capitalize ">{{title}}</h1> -->
         </v-col>
-        <v-col class="d-flex justify-centetr" sm="12" md="12" lg="12" xl="12">
-          <p class="mx-12 grey--text">{{para}}</p>
+        <v-col class="d-flex justify-centetr" cols="12" sm="12" md="12" lg="12" xl="12">
+          <p class="mx-12 grey--text pa">{{para}}</p>
         </v-col>
       </v-row>
     </v-container>
@@ -34,12 +34,12 @@
             <div class="mx-12">
               <v-img :src="require('@/assets/articles/dan-farrell.jpg')" height="350" class="mx-18">
               </v-img>
-            </div>  
+            </div>
             <v-col class="d-flex justify-start ml-8" cols="12" sm="12" md="12" lg="12" xl="12">
               <h1 class="display-1 grey--text  text-capitalize">The Art Of Travel</h1>
             </v-col>
             <v-col class="d-flex justify-center" cols="12" sm="12" md="12" lg="12" xl="12">
-              <p class="px-10 grey--text">
+              <p class="px-10 grey--text pa">
                 {{para}}
               </p>
             </v-col>
@@ -58,7 +58,7 @@
               <h1 class="display-1 grey--text text-capitalize">The Art Of Travel</h1>
             </v-col>
             <v-col class="d-flex justify-center" cols="12" sm="12" md="12" lg="12" xl="12">
-              <p class="px-10 grey--text">
+              <p class="px-10 grey--text pa">
                 {{para}}
               </p>
             </v-col>
@@ -114,8 +114,12 @@
 
 </script>
 <style scoped>
-  .dave v-img {
-    position: fixed;
+  .tit {
+    font-family: Cardo;
+  }
+
+  h1{
+    font-family: Barlow_Light;
   }
 
 </style>

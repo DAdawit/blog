@@ -4,8 +4,13 @@ import './plugins/base'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+// import 'material-design-icons-iconfont/dist/material-design-icons.css' 
+import 'vue-material-design-icons/styles.css';
+Vue.filter('snippet',(value)=>{
+  return value.slice(0,200)+'...'
+})
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 new Vue({
   vuetify,

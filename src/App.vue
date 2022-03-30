@@ -24,4 +24,26 @@
       CoreView: () => import('@/components/core/View'),
     },
   }
+
 </script>
+
+<style>
+  @font-face {
+    font-family: "Hurricane";
+    src: local("Hurricane_Regular"),
+      url(./assets/fonst/Hurricane_Regular.ttf) format("truetype");
+  }
+
+  @font-face {
+    font-family: "Barlow";
+    src: local("Barlow_Light"),
+      url(./assets/fonst/Barlow_Light.ttf) format("truetype");
+  }
+
+  @font-face {
+    font-family: "Cardo_Regular";
+    src: local("Cardo_Regular"),
+      url(./assets/fonst/Cardo_Regular.ttf) format("truetype");
+  }
+
+</style>

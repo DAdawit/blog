@@ -7,7 +7,7 @@ import store from './store'
 // import 'material-design-icons-iconfont/dist/material-design-icons.css' 
 
 Vue.filter('snippet',(value)=>{
-  return value.slice(0,200)+'...'
+  return value.slice(0,200)+' ...'
 })
 
 Vue.config.productionTip = false;

@@ -14,18 +14,22 @@
         </v-row>
       </v-img>
     </base-card>
-
-    <v-container class="mt-10">
-      <v-row>
-        <v-col class="d-flex justify-center" sm="12" md="12" lg="12" xl="12">
-          <h1 class="display-2 grey--text mb-5 text-capitalize">{{title}}</h1>
-          <!-- <h1 class="display-3 grey--text text-capitalize ">{{title}}</h1> -->
-        </v-col>
-        <v-col class="d-flex justify-centetr" cols="12" sm="12" md="12" lg="12" xl="12">
-          <p class="mx-12 grey--text pa">{{para}}</p>
-        </v-col>
-      </v-row>
-    </v-container>
+    <v-card>
+      <v-container class="mt-10">
+        <v-row>
+          <!-- <v-img :src="require('@/assets/articles/jewelry_banner.jpg')" class="grey lighten-2 fix" height="500" width="100%"> -->
+          <v-col class="d-flex justify-center" sm="12" md="12" lg="12" xl="12">
+            <h1 class="display-2 grey--text mb-5 text-capitalize">{{title}}</h1>
+          </v-col>
+          <v-col class="d-flex justify-centetr" cols="12" sm="12" md="12" lg="12" xl="12">
+            <v-card-text>
+            <p class="mx-12 grey--text pa">{{para}}</p>
+            </v-card-text>
+          </v-col>
+          <!-- </v-img> -->
+        </v-row>
+      </v-container>
+    </v-card>
 
     <v-row>
       <v-col cols="12" sm="12" md="6" lg="6" xl="6">
@@ -106,7 +110,7 @@
     name: 'HomeBanner',
     data() {
       return {
-        title: 'Where does it come from?',
+        title: 'Where does it come from',
         para: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.'
       }
     }
@@ -118,8 +122,13 @@
     font-family: Cardo;
   }
 
-  h1{
+  h1 {
     font-family: Barlow_Light;
   }
+
+  /* .des{
+    background-color: rgb(247, 180, 44);
+    opacity: 0.7;
+  } */
 
 </style>

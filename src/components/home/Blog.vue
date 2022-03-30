@@ -96,20 +96,25 @@
                       <p class="subheading grey--text mb-5 ">
                         {{para}}
                       </p>
-
+                    </v-col>
+                    <v-col cols="12">
+                      <h2>contact</h2>
+                      <br>
+                    </v-col>
+                       <v-divider></v-divider>
+                    <v-col class='d-flex align-end'>
+                      <base-btn v-for="(item, i) in items" :key="i" :href="item.href" class="ml-0 mr-3" color="primary"
+                        square target="_blank">
+                        <v-icon v-text="item.icon" />
+                      </base-btn>
                     </v-col>
                   </v-row>
                 </v-col>
               </v-row>
             </v-card-text>
-
             <v-divider></v-divider>
 
             <v-card-actions>
-              <base-btn v-for="(item, i) in items" :key="i" :href="item.href" class="ml-0 mr-3" color="primary" square
-                target="_blank">
-                <v-icon v-text="item.icon" />
-              </base-btn>
               <v-spacer></v-spacer>
               <v-btn color="primary" text @click="dialog = false">
                 close
@@ -139,7 +144,7 @@
 
     data() {
       return {
-        page:1,
+        page: 1,
         items: [{
             href: 'https://www.instagram.com/dawitccnt',
             icon: 'mdi-instagram',

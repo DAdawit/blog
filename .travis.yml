@@ -1,10 +1,10 @@
 language: node_js
 node_js:
   - lts/*
-cache: npm 
+cache: yarn 
 
 script:
-  - npm run build
+  - yarn build
 deploy:
   provider: pages
   local_dir: dist

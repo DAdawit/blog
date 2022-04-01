@@ -98,7 +98,7 @@
                       </p>
                     </v-col>
                     <v-col cols="12">
-                      <h2>contact</h2>
+                      <h2>contact us on</h2>
                       <br>
                     </v-col>
                        <v-divider></v-divider>

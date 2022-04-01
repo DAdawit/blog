@@ -7,10 +7,13 @@
         <v-img :src="require('@/assets/logo.png')" class="mr-5" contain height="48" width="48" max-width="48"
           @click="$vuetify.goTo(0)" />
 
-        <v-btn v-for="(link, i) in links" :key="i" v-bind="link" class="hidden-sm-and-down" text
+        <!-- <v-btn v-for="(link, i) in links" :key="i" v-bind="link" class="hidden-sm-and-down" text
           @click="onClick($event, link)">
           {{ link.text }}
-        </v-btn>
+        </v-btn> -->
+        <v-btn  class="hidden-sm-and-down" text to="/">Home</v-btn>
+        <v-btn  class="hidden-sm-and-down" text to="/about">About</v-btn>
+        <v-btn  class="hidden-sm-and-down" text to="/blog">Blog</v-btn>
 
         <v-spacer />
 
@@ -47,3 +50,9 @@
   }
 
 </script>
+
+<style scoped>
+.v-btn--active{
+  background-color: rgba(222, 181, 20, 0.885);
+}
+</style>

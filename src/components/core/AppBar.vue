@@ -33,7 +33,7 @@
         </v-list-item>
 
         <v-divider></v-divider>
-        <v-list-item v-for="item in links" :key="item.title" router :to="item.route">
+        <v-list-item v-for="item in links" :key="item.title" router :to="item.href">
           <v-list-item-content>
             <v-list-item-title>{{ item.text }}</v-list-item-title>
           </v-list-item-content>
@@ -63,16 +63,14 @@
         links: [{
             text: 'HOME',
             href: '/',
-            to: 'home'
           },
           {
             text: 'ABOUT',
-            href: 'about'
+            href: '/about'
           },
           {
             text: 'BLOG',
-            href: 'blog',
-            to: '/blog'
+            href: '/blog'
           },
         ]
       }

@@ -4,7 +4,7 @@ import './plugins/base'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-// import 'material-design-icons-iconfont/dist/material-design-icons.css' 
+import 'material-design-icons-iconfont/dist/material-design-icons.css'
 
 Vue.filter('snippet',(value)=>{
   return value.slice(0,200)+' ...'
